@@ -36,7 +36,7 @@ export class AppComponent {
 
 - @Self : Looks within it's own class to resolve the dependencies
 
-```
+```javascript
 @Component({
   providers: [ UserService ]
 })
@@ -47,7 +47,7 @@ export class AppComponent {
 
 - @SkipSelf : Skips Looking it's own class to resolve the dependencies and instead goes through the hierarchy to resolve.
 
-```
+```javascript
 @Component({
   providers: [ UserService ]
 })
@@ -59,7 +59,7 @@ export class AppComponent {
 
 - @Host : Looks to resolve the dependencies from the View (template / html) perspective.
 
-```
+```javascript
 @Component({ })
 export class AppComponent {
   constructor(@Host private userService: UserService) {}
@@ -68,9 +68,38 @@ export class AppComponent {
 
 
 ### What are Dependency Providers ? Types ?
-- UseClass
-- UseExisting
-- UseValue
-- UseFactory
+A dependency provider configures an injector with a DI token, which that injector uses to provide the runtime version of a dependency value.
+
+- useClass
+```javascript
+@Component({ 
+  [{ provide: Logger, useClass: BetterLogger  }]
+})
+export class AppComponent { }
+```
+
+- useExisting
+```javascript
+@Component({ 
+  [{ provide: OldLogger, useExisting: NewLogger }]
+})
+export class AppComponent { }
+```
+
+- useValue
+```javascript
+@Component({ 
+  [{ provide: Logger, useValue: SimpleLogger }]
+})
+export class AppComponent { }
+```
+
+- useFactory
+```javascript
+@Component({ 
+  [{ provide: Logger, useFactory: LoggerServiceFactory }]
+})
+export class AppComponent { }
+```
 
 ### What are Dependency Injection Tokens ?
