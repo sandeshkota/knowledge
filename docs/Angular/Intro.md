@@ -28,7 +28,7 @@ To manage version that was there within the Angular libraries
 - Change Detection (1way & 2way binding)
 
 ### What are metadata / annotations ?
-The metadata which are added to a class / method / properties / parameters, which tells angular to treat it as per the metadata.
+The metadata is something which are added to a class / method / properties / parameters, which tells angular about it's behaviour.
 - Class ( @Component , @Directive , @MNgModule , @Pipe , @Injectable )
 - Method ( @HostListener )
 - Properties ( @Output , @Input , @HostBinding )
