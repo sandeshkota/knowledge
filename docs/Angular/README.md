@@ -1,3 +1,3 @@
 ## Angular
 
-### [Intro](./Intro)
+### [Intro](./Angular/Intro)
