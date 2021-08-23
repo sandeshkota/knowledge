@@ -57,3 +57,98 @@ const routes: Routes = [
 ```
 localhost:8080/profile will load the Profile Component.  
 localhost:8080/profile/details will load the Profile Detail Component.
+
+
+### How do you protect a Rout from un authorized access ?
+By Using Auth Guards.
+```javascript
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './_helpers/auth.guard';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+ ]
+ 
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+})
+export class AppModule { }
+```
+Guard Implementation
+```javascript
+import { Injectable } from '@angular/core';
+import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { AuthenticationService } from '../_services/authentication.service';
+
+@Injectable({ providedIn: 'root' })
+export class AuthGuard implements CanActivate {
+    constructor(
+        private router: Router,
+        private authenticationService: AuthenticationService
+    ) {}
+
+    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+        const currentUser = this.authenticationService.currentUserValue;
+
+        if (currentUser && currentUser.token !== undefined) {
+            // authorised so return true
+            return true;
+        }
+
+        // not logged in so redirect to login page with the return url
+        this.router.navigate(['/login'], { queryParams: { returnUrl: state.url }});
+        return false;
+    }
+}
+```
+
+### Different types of Guard ?
+CanActivate - Runs before the component is activated
+
+CanActivateChild - Runs every time the child path is requested
+```javascript
+import { Injectable } from '@angular/core';
+import { Router, CanActivateChild, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+
+@Injectable({ providedIn: 'root' })
+export class AuthGuard implements CanActivateChild {
+    constructor( private router: Router ) {}
+
+    CanActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+        return false;
+    }
+}
+```
+
+CanLoad -  Used when there are lazily loaded modules. It will decide whether the module should be loaded or not. ( basically loads or ignores loading the respective module .js file)
+```javascript
+import { Injectable } from '@angular/core';
+import { Router, CanLoad, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+
+@Injectable({ providedIn: 'root' })
+export class AuthGuard implements CanLoad {
+    constructor( private router: Router ) {}
+
+    CanLoad(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+        return false;
+    }
+}
+```
+
+CanDeactivate - Runs when the there is a redirection from the current component to another component. 
+```javascript
+import { Injectable } from '@angular/core';
+import { Router, CanDeactivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+
+@Injectable({ providedIn: 'root' })
+export class AuthGuard implements CanDeactivate {
+    constructor(
+        private router: Router
+    ) {}
+
+    CanDeactivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+        return false;
+    }
+}
+```
