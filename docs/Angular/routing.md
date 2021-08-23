@@ -191,6 +191,7 @@ const routes: Routes = [
     ]
   },
 ];
+```
 
 ### How do you get the params from the current route ?
 By using the ActivatedRoute object.
