@@ -5,7 +5,6 @@
 - [Directive](./Angular/directive)
 - [Routing & Guards](./Angular/routing)
 - [Pipes](./Angular/pipes)
-- [Guards](./Angular/guards)
 - [Interceptors](./Angular/interceptors)
 - [Compiler](./Angular/compiler)
 - [Life Cycle](./Angular/lifecycle)
