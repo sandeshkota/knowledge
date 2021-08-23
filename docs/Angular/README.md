@@ -12,6 +12,7 @@
 - [RxJS](./Angular/rxjs)
 - [Zone in Angular](./Angular/zone)
 - [Performance](./Angular/performance)
+- [Other](./Angular/other)
 
 
 
