@@ -51,3 +51,22 @@ Impure Pipe is called for every change detection cycle no matter whether the val
 export class FilterPipe {}
 ```
 
+### What does async pipe in angular does ?
+The async pipe subscribes to an Observable or Promise and returns the latest value it has emitted.
+
+```javascript
+ @Component({
+  selector: 'async-promise-pipe',
+  template: `<div>
+    <span>Wait for it... {{ greeting | async }}</span>
+    <span>Updated at {{ updatedTime | async }}</span>
+  </div>`
+})
+export class AsyncPromisePipeComponent {
+  greeting: Promise<string>|null = null;
+  
+  updatedTime = new Observable<string>((observer: Observer<string>) => {
+    setInterval(() => observer.next(new Date().toString()), 1000);
+  });
+}
+```
