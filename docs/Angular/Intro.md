@@ -33,3 +33,36 @@ The metadata is something which are added to a class / method / properties / par
 - Method ( @HostListener )
 - Properties ( @Output , @Input , @HostBinding )
 - Parameters ( @Optional , @Self , @SkipSelf ) 
+
+### What are Modules ? NgModule in Angular ?
+Modules in Angualre is a logical enclosure of a certain functionality. Consists components, directives, pipes, etc.. related to a certain funcitonality
+e.g. FormsModule, ReactiveFormsModule, HttpModule, BrowserModule, etc..
+
+### Different Configuration in Angular Module ?
+Declarations - The buildings blocks of this module - components, directives, pipes
+Imports - List of other modules that are needed for this module
+Exports - THe Components which should be exposed  to other modules when imported
+Providers - The services which are required for this module. Angular keeps a track of this list and injects it wherever needed. Creates a singleton
+Bootstrap - Tells angular which component to bootstrap at the start of the application
+
+```javascript
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+  ],
+  imports: [
+    BrowserModule,
+  ],
+  exports: [
+    AppComponent,
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
