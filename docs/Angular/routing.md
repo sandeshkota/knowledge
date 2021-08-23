@@ -38,8 +38,6 @@ The path can be chained and configured as below
 ```javascript
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'forgotpassword', component: ForgotPasswordComponent },
   { 
     path: 'profile', 
     component: ProfileComponent,
@@ -52,11 +50,23 @@ const routes: Routes = [
       }
     ]
   },
-  { path: '**', redirectTo: '' }
 ];
 ```
 localhost:8080/profile will load the Profile Component.  
 localhost:8080/profile/details will load the Profile Detail Component.
+
+### Lazy v/s Eager Loading ?
+Eager loading is the default behavior wherein the complete bundled JS file loaded as part of first request.
+Lazy loading is in a way of loading the JS file partially and loading the remaining JS when it is really needed.
+
+### How do you achieve lazily loading in Angular ?
+The below configuration will ensure that the respective files are loaded only when the user goes to the corresponding path
+```
+{ 
+    path: 'profile/settings', 
+    loadChildren: () => import('./profile/settings.module').then(m => m.ProfileSettingsComponent),
+  },
+```
 
 
 ### How do you protect a Rout from un authorized access ?
@@ -152,3 +162,32 @@ export class AuthGuard implements CanDeactivate {
     }
 }
 ```
+
+### What is component-less routing pattern ?
+If there is a need to apply certain guards only to certain childs, we use the component-less routing pattern. Suppose I want to apply UserAdminProfileGuard only for setting and details and UserSupportProfileGuard for Notes how do we do it ?
+```javascript
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { 
+    path: 'profile', 
+    component: ProfileComponent,
+    children: 
+    [
+      {
+        path:'',
+        canActivate: [UserAdminProfileGuard],
+        children: [
+          {
+            path:'details', component: ProfileDetailsComponent
+          },
+          {
+            path:'settings', component: ProfileSettingsComponent
+          }
+        ]
+      },
+      {
+        path:'settings', canActivate: [UserSupportProfileGuard], component: ProfileSettingsComponent
+      }
+    ]
+  },
+];
