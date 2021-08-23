@@ -30,7 +30,7 @@ export class MultiplierPipe implements PipeTransform {
 ```
 The above Pipe can be used as below,
 ```html
-<span>{{ title | Multiplier: 3 }}</span>
+<span>{{ numberValue | Multiplier: 3 }}</span>
 ```
 
 ### Pure v/s Impure Pipe ?
