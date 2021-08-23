@@ -3,7 +3,7 @@
 - [Intro](./Angular/Intro)
 - [Dependency Injection](./Angular/di)
 - [Directive](./Angular/directive)
-- [Routing](./Angular/routing)
+- [Routing & Guards](./Angular/routing)
 - [Pipes](./Angular/pipes)
 - [Guards](./Angular/guards)
 - [Interceptors](./Angular/interceptors)
