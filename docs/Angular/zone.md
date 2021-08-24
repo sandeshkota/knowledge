@@ -35,12 +35,14 @@ export class SampleComponent {
   
   constructor(private zone: NgZone){}
   
+  // Do not Trigger Change Detection
   RunLogicWithoutChangeDetection() {
     this.zone.runOutsideAngular(() => {
        this.updated = true;
     });
   }
 
+  // Trigger Change Detection
   RunLogicWithChangeDetection() {
     this.ngZone.run(() => {
         this.updated = true;
