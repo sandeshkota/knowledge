@@ -66,3 +66,31 @@ import { AppComponent } from './app.component';
 })
 export class AppModule { }
 ```
+
+### Crete a new Module and Import it in App Module
+```javascript
+// sample.module.ts file
+import { NgModule } from '@angular/core';
+import { SampleComponent } from './sample.component';
+
+@NgModule({
+  declarations: [ SampleComponent ],
+  exports: [ SampleComponent ]
+})
+export class SampleModule {
+}
+
+
+// app.module.ts
+import { NgModule } from '@angular/core';
+import { SampleModule } from './sample.module'; 
+
+@NgModule({
+  imports: [ SampleModule ]
+})
+export class SampleModule {
+}
+
+// any component in AppModule
+<app-sample></app-sample>
+```
