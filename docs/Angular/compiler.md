@@ -11,14 +11,6 @@ Ivy is improved compiler and runtime which is completely released with Angular 9
 JIT - Compiles the app in the browser at run time. Default when you run ```ng serve``` OR ```ng build```
 AOT - Compiles the app at build time. ```ng build --aot``` , ```ng serve --aot``` and ```ng build --prod``` builds with AOT compilation
 
-
-### Optimzation Techniques
-AOT - removes dependency on the compiler in the browser.
-Lazy Loading - Load moduels based on need
-Differential Loading
-InjectableIn services - Instead of adding it in providers: [] so that it will be removed if not used - tree shaking
-Enable OnPush change detection strategy OR NgZone - RunOutsideAngular()
-
 ### Advantages of AOT
 - Faster rendering: Browser downloads pre vompiled version of the app.
 - Smaller Angular framework download size - doesn't require downloading angular compiler.
