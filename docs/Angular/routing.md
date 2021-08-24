@@ -65,8 +65,9 @@ The below configuration will ensure that the respective files are loaded only wh
 { 
     path: 'profile/settings', 
     loadChildren: () => import('./profile/settings.module').then(m => m.ProfileSettingsComponent),
-  },
+},
 ```
+Also the Module shouldn't be part of declarations.
 
 
 ### How do you protect a Rout from un authorized access ?
@@ -195,3 +196,8 @@ const routes: Routes = [
 
 ### How do you get the params from the current route ?
 By using the ActivatedRoute object.
+
+
+### Difference b/w RouterModule.forRoot() and RouterModule.forChild()
+Root Module -> RouterModule.forRoot()  
+Sub Modules or lazy loaded modules -> RouterModule.forChild()
