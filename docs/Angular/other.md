@@ -88,3 +88,9 @@ Used when a tempalte should be insterted in multiple places
   </ng-template>
   
 ```
+
+  
+### @ViewChild() and @ContentChild() 
+Both these are referring elements from View - Should be declared as properties and angualr binds it in their respective life cycles  
+@ViewChild() is a way of referring the boew. Using tempalte reference and ElementRef. The binding element/component will be availble only after ngAfterViewInit life cycle  
+@ContentChild() provides access to the element/component in the child component that is projected from parent component. A property defined in class can be used only afterngAfterContentInit life cycle
