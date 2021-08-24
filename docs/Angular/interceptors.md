@@ -29,7 +29,7 @@ export class JwtInterceptor implements HttpInterceptor {
 ```
 
 Register the interceptor in AppModule
-```
+```javascript
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
