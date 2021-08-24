@@ -54,7 +54,7 @@ The ng-content will be replaced by the actual content where the component is use
 </info-component>
 ```
 
-### Multiple Content Projections
+### Multiple Content Projections using ng-content
 ```html
 <div class="content">
   <h1> Welcome </h1>
@@ -68,4 +68,23 @@ usage
   <h2> This is my first project </h2>
   <span> Copyrights @SK </span>
 </info-component>
+```
+
+  
+### ng-template
+Used when a tempalte should be insterted in multiple places
+```html
+  <div>
+    Welcome to my first site
+    <ng-container *ngTemplateOutlet="copyrightInfo"></ng-container>
+  </div>
+  
+  <div>
+    Profile details
+    <ng-container *ngTemplateOutlet="copyrightInfo"></ng-container>
+  </div>
+  
+  <ng-template #copyrightInfo>
+  </ng-template>
+  
 ```
