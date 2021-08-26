@@ -12,6 +12,7 @@
 
 - Example 1  
 Code 
+
 ```javascript
 // math.ts
 export function increment(value: number): number {
@@ -22,7 +23,9 @@ export function increment(value: number): number {
   return value + 1;
 }
 ```
+
 Test
+
 ```javascript
 // math.spec.ts
 import { increment } from './math';
@@ -44,6 +47,7 @@ describe('Increment', () => {
 
 - Example 2
 Code
+
 ```javascript
 // vote.component.ts
 
@@ -61,6 +65,7 @@ export class VoteComponent {
 ```
 
 Test
+
 ```javascript
 // vote.component.spec.ts
 import { VoteComponent } from './vote.component';
@@ -88,8 +93,8 @@ describe('VoteComponent', () => {
 ```
 
 ###  Jasmine Test setup and Tear Down
-```javascript
 
+```javascript
 // suite
 describe('VoteComponent', () => {
   beforeEach(() => {
@@ -115,6 +120,7 @@ describe('VoteComponent', () => {
 ```
 
 - Example 3
+- 
 ```javascript
 @Component({
   selector: 'lightswitch-comp',
@@ -128,7 +134,9 @@ export class LightswitchComponent {
   get message() { return `The light is ${this.isOn ? 'On' : 'Off'}`; }
 }
 ```
+
 Tests
+
 ```javascript
 describe('LightswitchComp', () => {
   it('#clicked() should toggle #isOn', () => {
@@ -144,7 +152,9 @@ describe('LightswitchComp', () => {
 
 ### Angular TestBed
 The TestBed is the most important of the Angular testing utilities. The TestBed creates a dynamically-constructed Angular test module that emulates an Angular @NgModule.
+
 Sample
+
 ```typescript
 let service: ValueService;
 
@@ -160,6 +170,7 @@ it('should use ValueService', () => {
 ```
 
 Mocking an object
+
 ```typescript
 let masterService: MasterService;
 let valueServiceSpy: jasmine.SpyObj<ValueService>;
@@ -181,6 +192,7 @@ beforeEach(() => {
 ```
 
 Testing HTTP services
+
 ```javascript
 let httpClientSpy: { get: jasmine.Spy };
 let heroService: HeroService;
@@ -193,7 +205,9 @@ beforeEach(() => {
 ```
 
 ### Sample Integration Tests
+
 - Example 1
+
 ```javascript
 describe('BannerComponent (minimal)', () => {
   it('should create', () => {
@@ -207,6 +221,7 @@ describe('BannerComponent (minimal)', () => {
 ```
 
 - Example 2
+
 ```javascript
 @Component({
   selector: 'app-banner',
@@ -217,7 +232,9 @@ export class BannerComponent {
   title = 'Test Tour of Heroes';
 }
 ```
+
 Test
+
 ```javascript
 let component: BannerComponent;
 let fixture: ComponentFixture<BannerComponent>;
@@ -245,6 +262,7 @@ it('should display original title after detectChanges()', () => {
 ```
 
 - Example 3 : Automate Change detection
+
 ```javascript
 TestBed.configureTestingModule({
   declarations: [ BannerComponent ],
@@ -260,6 +278,7 @@ it('should display original title', () => {
 ```
 
 ### To fake/mock
+
 ```javascript
 let userServiceStub: Partial<UserService>;
 
@@ -293,6 +312,7 @@ userService = TestBed.inject(UserService);
 ```
 
 With Spy
+
 ```javascript
 beforeEach(() => {
   testQuote = 'Test Quote';
