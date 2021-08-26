@@ -113,3 +113,19 @@ describe('VoteComponent', () => {
   });
 })
 ```
+
+
+### Commands
+Run tests ``` ng test ```  
+
+Run test with code coverage ``` ng test --code-coverage ```
+OR
+angular.json configuration
+```
+"test": {
+  "options": {
+    "codeCoverage": true
+  }
+}
+```
+
