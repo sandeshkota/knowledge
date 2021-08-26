@@ -29,19 +29,15 @@ Test
 ```javascript
 // math.spec.ts
 import { increment } from './math';
-
 describe('Increment', () => {
-
   it('should return 0 if input is negative', () => {
     const result = increment(-1);
     expect(result).toBe(0);
-  });
-  
+  }); 
   it('should increment the input by 1 if it is positive', () => {
     const result = increment(1);
     expect(result).toBe(2);
   });
-
 })
 ```
 
@@ -50,14 +46,11 @@ Code
 
 ```javascript
 // vote.component.ts
-
 export class VoteComponent {
   totalVotes: number = 0;
-  
   upVote() {
     this.totalVotes++;
-  }
-  
+  }  
   downVote() {
     this.totalVotes--;
   }
@@ -68,27 +61,22 @@ Test
 
 ```javascript
 // vote.component.spec.ts
-import { VoteComponent } from './vote.component';
-  
+import { VoteComponent } from './vote.component';  
 describe('VoteComponent', () => {
-  let component: VoteComponent;
-  
+  let component: VoteComponent; 
   beforeEach(() => {
     component = new VoteComponent();
   });
-
   it('should increment totalVotes when upvoted', () => {
     component.upVote();
     
     expect(component.totalVotes).toBe(1);
   });
-  
   it('should decrement totalVotes when downvoted', () => {
     component.upVote();
     
     expect(component.totalVotes).toBe(-1);
   });
-
 })
 ```
 
@@ -100,19 +88,15 @@ describe('VoteComponent', () => {
   beforeEach(() => {
     // runs before each test run
   });
-
   afterEach(() => {
     // runs after each test run
   });
-
   beforeAll(() => {
     // runs once before suite run
   });
-  
   afterAll(() => {
     // runs once after suite run
   });
-
   // test
   it('should test', () => {
   });
@@ -120,7 +104,7 @@ describe('VoteComponent', () => {
 ```
 
 - Example 3
-- 
+
 ```javascript
 @Component({
   selector: 'lightswitch-comp',
