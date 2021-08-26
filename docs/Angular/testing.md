@@ -41,3 +41,12 @@ describe('Increment', () => {
 
 })
 ```
+
+- Example 2
+Code
+```javascript
+```
+
+Test
+```javascript
+```
