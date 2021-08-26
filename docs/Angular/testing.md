@@ -139,7 +139,7 @@ The TestBed is the most important of the Angular testing utilities. The TestBed 
 
 Sample
 
-```typescript
+```javascript
 let service: ValueService;
 
 beforeEach(() => {
@@ -155,7 +155,7 @@ it('should use ValueService', () => {
 
 Mocking an object
 
-```typescript
+```javascript
 let masterService: MasterService;
 let valueServiceSpy: jasmine.SpyObj<ValueService>;
 
