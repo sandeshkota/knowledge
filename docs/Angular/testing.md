@@ -114,6 +114,56 @@ describe('VoteComponent', () => {
 })
 ```
 
+### Angular TestBed
+The TestBed is the most important of the Angular testing utilities. The TestBed creates a dynamically-constructed Angular test module that emulates an Angular @NgModule.
+Sample
+```typescript
+let service: ValueService;
+
+beforeEach(() => {
+  TestBed.configureTestingModule({ providers: [ValueService] });
+});
+
+
+it('should use ValueService', () => {
+  service = TestBed.inject(ValueService);
+  expect(service.getValue()).toBe('real value');
+});
+```
+
+Mocking an object
+```typescript
+let masterService: MasterService;
+let valueServiceSpy: jasmine.SpyObj<ValueService>;
+
+beforeEach(() => {
+  const spy = jasmine.createSpyObj('ValueService', ['getValue']);
+
+  TestBed.configureTestingModule({
+    // Provide both the service-to-test and its (spy) dependency
+    providers: [
+      MasterService,
+      { provide: ValueService, useValue: spy }
+    ]
+  });
+  // Inject both the service-to-test and its (spy) dependency
+  masterService = TestBed.inject(MasterService);
+  valueServiceSpy = TestBed.inject(ValueService) as jasmine.SpyObj<ValueService>;
+});
+```
+
+Testing HTTP services
+```javascript
+let httpClientSpy: { get: jasmine.Spy };
+let heroService: HeroService;
+
+beforeEach(() => {
+  // TODO: spy on other methods too
+  httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
+  heroService = new HeroService(httpClientSpy as any);
+});
+```
+
 
 ### Commands
 Run tests ``` ng test ```  
