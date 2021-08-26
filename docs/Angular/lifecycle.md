@@ -9,8 +9,19 @@ Angular has following life cycle hooks for a directive / component
 - ngAfterViewChecked (many)
 - ngOnDestroy (once)
 
-### ng-content
+### ngOnInit 
+This event is called when Angular binds the tempalte to the components properties
 
+### ngAfterContentInit
+This event is triggered after the content projection. Content Projection is a technique wherein you can send the template/view information from parent to child.  
+@ContentChild() property is bound only after this lifecycle event.
+
+### ngAfterViewInit
+This event is triggered after the child component is bound. 
+@ViewChild() property is bound only after this lifecycle event.
+
+### ngOnDestroy
+This event is called when Angular starts destroying the component (may be bcoz of navigation wherenin it has to load another component in it's place)
 
 ### ElementRef
 A wrapper around the native element through which we can access the HTML element
