@@ -97,6 +97,10 @@ To bring this up, run
 ```yaml 
 docker-compose -f myapp-compose.yaml up 
 ```
+Once done, to stop all the containers, run
+```yaml 
+docker-compose -f myapp-compose.yaml down 
+```
 
 Using ```--link``` is old way
 
