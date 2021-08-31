@@ -11,4 +11,4 @@
 
 ### On MacOS
 - Docker Toolbox: Uses Oracle bootbox to run Linux and then on top of it installs and runs the docker (Deprecated)
-- Docker Desktop: Uses MacOS virtualization to run Linux and then on top of it installs and runs the docker 
+- Docker Desktop: Uses MacOS ???? to run Linux and then on top of it installs and runs the docker 
