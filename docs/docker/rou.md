@@ -42,3 +42,19 @@ docker pull localhost:5000/my-image
 
 docker pull 192.168.56.100:5000/my-image
 ```
+
+
+## Namespace PID
+As containers runs in host machine and each process must have a unique ID, how does docker run services inside container and manage    
+Docker creates the process starting with Process ID as 1, but in actual it has a different process Id in host machine. Docker manages this mapping.   
+
+## cgroups
+Used to restrict the usage of resources for a particular container
+- restricting max 50% cpu usage
+```
+docker run --cpus=.5 ubuntu
+```
+- restricting memory usage for a container
+- ```
+- docker run --memory=100m ubuntu
+- ```
