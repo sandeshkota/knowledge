@@ -159,25 +159,21 @@ services:
   redis:
     image: redis
     networks:
-      - back-end
-      
+      - back-end      
   db:
     image: postgres:9.4
     networks:
-      - back-end
-      
+      - back-end      
   vote:
     ...
     networks:
       - front-end
-      - back-end
-    
+      - back-end   
   result:
     ...
     networks:
       - front-end
       - back-end
-
 networks:
   - front-end
   - back-end
