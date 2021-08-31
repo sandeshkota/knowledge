@@ -52,3 +52,27 @@ and only the Source code iiamge is built on top of the flask image that was alre
 
 ### Readonly Layer and Read-Write Layer
 When a container is ran using an image - a new container layer is created which is a read-write layer. Where the container generated data is stored.
+
+when the container is closed/deleted, all the data is deleted.
+
+### To Persist
+- Volume Mounting
+Create a volume
+``` docker volume create data_volume ```
+And map this to the container so that the container can use it
+``` docker run -v data_volume:/var/lib/mysql mysql ```
+
+To automatically create a volume, creates the new volume and then mounts it
+``` docker run data_new_volume:/var/lib/mysql mysql ```
+
+- Bind Mounting
+In case the volume already exists, a directory,
+``` docker run  -v data/mysql:/var/lib/mysql mysql ```
+
+
+### New way
+Using -v is old way. Use -mount
+```
+docker run \
+--mount type:bind,source=/data/mysql,target=/var/lib/mysql mysql
+```
