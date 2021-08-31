@@ -15,6 +15,11 @@ COPY ./opt/source-code
 ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
 ```
 
+To build an image
+```
+docker build Dockerfile -t sk/sample-web-app
+```
+
 ### Pushing Images to Central Repository
 
 ### Running Docker Image
