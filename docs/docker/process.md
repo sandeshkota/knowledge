@@ -29,7 +29,6 @@ CMD [ "node", "/home/app/server.js" ]
 ```
 
 In Jenkins: Build docker image based on Dockerfile
-
 ```yaml
 # the . at the end points to docker file path
 docker build -t my-app:1.0 .
@@ -56,15 +55,14 @@ docker pull mango:4.2
 docker pull docker.io/library/mongo:4.2
 ```
 
-- For private repo, full name should be provided
+- For private repo, full name should be provided,
+
 ```yaml
 # to push to docker.io
 docker push <image_name>
-
 # to private repo - we need to tag it with repo path
 docker tag my-app:1.0 213232.dkr.ecr.eu-central-1.amazonaws.com/my-app:1.0
-
-# Push the tagged image to private repo
+# push the tagged image to private repo
 docker push 213232.dkr.ecr.eu-central-1.amazonaws.com/my-app:1.0
 ```
 
