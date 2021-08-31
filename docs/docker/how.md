@@ -100,6 +100,12 @@ To see the logs which we ran in the background
 To access a container's terminal
 ``` docker exec -it <container_name> ```
 
+To Restart
+```
+docker stop <container_name>
+docker start <container_name>
+```
+
 ## Environment Variables
 To use a environment variable 
 ```
