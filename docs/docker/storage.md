@@ -12,7 +12,7 @@ When you install docker the follwoing file system is created
 - The layered images that are created using docker are stored in ``` iamges ```
 
 Dockerfile #1
-```
+```yaml
 FROM UBUNTU
 
 RUN apt-get update && apt-get -y install python
@@ -24,13 +24,13 @@ COPY ./opt/source-code
 ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
 ```
 To build
-```
+```yaml
 docker build Dockerfile -t sk/sample-app
 ```
 
 
 Dockerfile #2
-```
+```yaml
 FROM UBUNTU
 
 RUN apt-get update && apt-get -y install python
@@ -42,7 +42,7 @@ COPY app2.py/opt/source-code
 ENTRYPOINT FLASK_APP=/opt/source-code/app2.py flask run
 ```
 To build
-```
+```yaml
 docker build Dockerfile -t sk/sample2-app
 ```
 
@@ -58,21 +58,29 @@ when the container is closed/deleted, all the data is deleted.
 ### To Persist
 - Volume Mounting
 Create a volume
-``` docker volume create data_volume ```
+```yaml
+docker volume create data_volume 
+```
 And map this to the container so that the container can use it
-``` docker run -v data_volume:/var/lib/mysql mysql ```
+```yaml
+docker run -v data_volume:/var/lib/mysql mysql 
+```
 
 To automatically create a volume, creates the new volume and then mounts it
-``` docker run data_new_volume:/var/lib/mysql mysql ```
+```yaml
+docker run data_new_volume:/var/lib/mysql mysql 
+```
 
 - Bind Mounting
 In case the volume already exists, a directory,
-``` docker run  -v data/mysql:/var/lib/mysql mysql ```
+```yaml
+docker run  -v data/mysql:/var/lib/mysql mysql 
+```
 
 
 ### New way
 Using -v is old way. Use -mount
-```
+```yaml
 docker run \
 --mount type:bind,source=/data/mysql,target=/var/lib/mysql mysql
 ```
