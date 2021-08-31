@@ -40,9 +40,9 @@ Containers are running instances of images that are isoalted and have own enviro
 
 
 ### Docker Engine
-- Docker CLI
-- HTTP API
-- Docker Daemon
+- Docker CLI: Command Line Interface for interacting with user. Uses Rest API to communicate with Docker Daemon
+- HTTP API: An API interface used to talk to Daemon and provide instructions 
+- Docker Daemon: background process that manages docker object such as images, volumes, network etc..
 
 ### Layered Architecture
 - Docker creates an image each time a change is applied on the base image
