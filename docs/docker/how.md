@@ -97,6 +97,9 @@ To check information on a container
 To see the logs which we ran in the background
 ``` docker logs <container_name> ```
 
+To access a container's terminal
+``` docker exec -it <container_name> ```
+
 ## Environment Variables
 To use a environment variable 
 ```
