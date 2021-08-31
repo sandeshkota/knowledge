@@ -123,7 +123,7 @@ docker run -v /opt/data/datadir:/var/lib/mysql mysql
 
 ### Other Information
 To check information on a container
-```
+```yaml
 docker inspect  <container_name> 
 ```
 
