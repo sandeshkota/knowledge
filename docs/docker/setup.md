@@ -3,17 +3,19 @@
 
 ### Staring a service within a container
 The CMD (Command) tells which service to start when a docker image is ran
-```
+```yaml
 FROM UBUNTU
 ...
 CMD [ "nginx" ]
 ```
 
 Run through command line
-``` docker run ubuntu sleep 5 ```
+```yaml 
+docker run ubuntu sleep 5 
+```
 
 Through docker file
-```
+```yaml
 FROM UBUNTU
 
 CMD sleep 5
@@ -22,14 +24,14 @@ Command can also be supplied as an array ``` CMD ["sleep", "5" ] ```
 While using the array, the first should always be executable and the rest of the parameters should be listed each as an item in the array
 
 Suppose we want the sleep time to be 100 ``` docker run ubuntu-sleeper 100 ```
-```
+```yaml
 FROM UBUNTU
 
 ENTRYPOINT ["sleep"]
 ```
 
 To add a default value if it is not supplied
-```
+```yaml
 FROM UBUNTU
 
 ENTRYPOINT ["sleep"]
@@ -55,7 +57,7 @@ Suppose we have several docker images to run and also ensure that the containers
 ```
 
 - Without Docker Compose (Use links to link each other contaienrs)
-```
+```yaml
 docker run -d --name=redis redis
 
 docker run -d --name=db postgre:9.4  --link db:db  
@@ -68,7 +70,7 @@ docker run -d --name=worker  --link db:db    --link redis:redis   worker
 ```
 
 -- with docker compone. Doesn't need links as the docker compose will create it's own network so that the applications can communicate to each other by default with just the names
-```
+```yaml
 redis:
   image: redis
 db:
@@ -125,7 +127,7 @@ worker:
 The above examples are for version #1. It has changed a lot with amny added features and deprecating old features.
 
 - The containers are linked by default.
-```
+```yaml
 version: 2
 services:
   redis:
@@ -143,7 +145,7 @@ services:
 ```
 
 - With different networks
-```
+```yaml
 version: 2
 services:
   redis:
