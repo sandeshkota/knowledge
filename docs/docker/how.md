@@ -135,6 +135,8 @@ docker logs <container_name>
 To access a container's terminal
 ```yaml
 docker exec -it <container_name> 
+
+docker exec -it <container_name> /bin/sh
 ```
 
 To Restart
