@@ -69,7 +69,7 @@ docker run -d --name=result -p 5001:80 result-app
 docker run -d --name=worker  --link db:db    --link redis:redis   worker
 ```
 
--- with docker compone. Doesn't need links as the docker compose will create it's own network so that the applications can communicate to each other by default with just the names
+- with docker compone. Doesn't need links as the docker compose will create it's own network so that the applications can communicate to each other by default with just the names
 ```yaml
 redis:
   image: redis
@@ -93,12 +93,15 @@ worker:
     - redis
     - db
 ```
-To bring this up, run ``` docker-compose up ```
+To bring this up, run 
+```yaml 
+docker-compose -f myapp-compose.yaml up 
+```
 
 Using ```--link``` is old way
 
 - Docker Compose Build (since the last three applications are our own image creations)
-```
+```yaml
 redis:
   image: redis
 db:
