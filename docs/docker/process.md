@@ -80,5 +80,11 @@ services:
         image: 213232.dkr.ecr.eu-central-1.amazonaws.com/my-app:1.0
         ports: 
             - 3000:3000
+            
+        volumes:
+            - db-data:/var/lib/mysql/data
+            
+volumes:
+    db-data
 ```
 
