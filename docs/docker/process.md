@@ -85,6 +85,7 @@ services:
             - db-data:/var/lib/mysql/data
             
 volumes:
-    db-data
+    db-data:
+        driver: local
 ```
 
