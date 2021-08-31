@@ -47,7 +47,7 @@ If we have a new version of the executable which is in ENTRYPOINT, we can run it
 Suppose we have several docker images to run and also ensure that the containers have access to the required containers, to ensure that all these are handled effectively, we can use Docker Compose file
 
 - Suppose we have an application as below
-```
+```javascript
   voting-app (app to vote)              result-app (app to see the results)
   
   im=nmemory-db (redis)                db (postgreSQL)
@@ -57,6 +57,7 @@ Suppose we have several docker images to run and also ensure that the containers
 ```
 
 - Without Docker Compose (Use links to link each other contaienrs)
+- 
 ```yaml
 docker run -d --name=redis redis
 
