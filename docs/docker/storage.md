@@ -61,14 +61,19 @@ Create a volume
 ```yaml
 docker volume create data_volume 
 ```
-And map this to the container so that the container can use it
+And map this to the container so that the container can use it (data synchroized b/w two paths)
 ```yaml
 docker run -v data_volume:/var/lib/mysql mysql 
 ```
 
-To automatically create a volume, creates the new volume and then mounts it
+To automatically create a volume, creates the new volume (named volumes) and then mounts it
 ```yaml
 docker run data_new_volume:/var/lib/mysql mysql 
+```
+
+Anonymouys Volumes
+```yaml
+docker run /var/lib/mysql mysql 
 ```
 
 - Bind Mounting
