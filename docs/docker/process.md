@@ -61,6 +61,11 @@ docker pull docker.io/library/mongo:4.2
 # to push to docker.io
 docker push <image_name>
 
+# to private repo - we need to tag it with repo path
+docker tag my-app:1.0 213232.dkr.ecr.eu-central-1.amazonaws.com/my-app:1.0
+
+# push the tagged image to private repo
+docker push 213232.dkr.ecr.eu-central-1.amazonaws.com/my-app:1.0
 ```
 
 ### Pull the image and run container
