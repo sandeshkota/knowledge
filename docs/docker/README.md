@@ -1,5 +1,3 @@
-## Basics of Docker
-
 ## [Introduction](./docker/intro)
 ## [Installation](./docker/install)
 ## [Networking](./docker/networking)
