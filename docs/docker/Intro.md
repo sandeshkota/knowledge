@@ -65,4 +65,5 @@ ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
 - Step #3: Then when flask is installed, a new image is created
 - Step #4: Then when the source-code is copied, a nwe image is created
 
+Also suppose a step failed, then the after fixing the issue, docker uses the images that are already built and builds images on top of it.  
 By doing this when there is an update only in source-code, docker builds the image by taking the already built image from Step #3
