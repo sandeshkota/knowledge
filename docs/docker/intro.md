@@ -47,7 +47,7 @@ Containers are running instances of images that are isoalted and have own enviro
 ### Layered Architecture
 - Docker creates an image each time a change is applied on the base image
 Example: Sample Dockerfile  - which downlaods the Ubuntu  and then installs pyhton etc..
-```
+```yaml
 FROM UBUNTU
 
 RUN apt-get update
@@ -60,6 +60,7 @@ COPY ./opt/source-code
 
 ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
 ```
+
 - Step #1: The OS image is downloaded
 - Step #2: Then when python is installed, a new image is created
 - Step #3: Then when flask is installed, a new image is created
