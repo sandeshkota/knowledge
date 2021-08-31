@@ -67,7 +67,7 @@ docker run -d --name=result -p 5001:80 result-app
 docker run -d --name=worker  --link db:db    --link redis:redis   worker
 ```
 
--- with docker compone
+-- with docker compone. Doesn't need links as the docker compose will create it's own network so that the applications can communicate to each other by default with just the names
 ```
 redis:
   image: redis
