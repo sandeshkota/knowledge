@@ -50,11 +50,13 @@ Docker creates the process starting with Process ID as 1, but in actual it has a
 
 ## cgroups
 Used to restrict the usage of resources for a particular container
+
 - restricting max 50% cpu usage
-```
+```yaml
 docker run --cpus=.5 ubuntu
 ```
+
 - restricting memory usage for a container
-- ```
-- docker run --memory=100m ubuntu
-- ```
+```yaml
+docker run --memory=100m ubuntu
+```
