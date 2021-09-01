@@ -44,5 +44,6 @@ During the second pass, the code (now an assembly in MSIL) is compiled into mach
 C# Code > C# Compiler (csc.exe) > IL > .NET Runtime > JIT Compiler > Machinecode > Execution
 VB Code > VB Compiler           > IL > .NET Runtime > JIT Compiler > Machinecode > Execution
 
-
+### Assembly, DLL, EXE ?
+Both .dll and .exe are assemblies. .exe contain one entry point, .dll can have multiple entry points
 
