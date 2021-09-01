@@ -47,3 +47,11 @@ VB Code > VB Compiler           > IL > .NET Runtime > JIT Compiler > Machinecode
 ### Assembly, DLL, EXE ?
 Both .dll and .exe are assemblies. .exe contain one entry point, .dll can have multiple entry points
 
+### finalize v/s dispose 
+Both are invoked to free the unmanaged resources held by an object  
+Finalize - is called by GC before the object is destroyed  
+Dispose - should be called explicitly by the code (IDisposable) (better perf)
+
+
+
+
