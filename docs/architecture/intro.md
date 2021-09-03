@@ -26,6 +26,9 @@ An architecture is a fundamental cocpets or properties of a system in its enviro
   - A means to achieve competitive advantage
   - Enables managed innovation within an enterprise
 
+### TTE v/s SE v/s EE
+![Difference](https://media-exp1.licdn.com/dms/image/C4E12AQH2TlxlcFc9ew/article-inline_image-shrink_1000_1488/0/1520243312299?e=1635984000&v=beta&t=tK4B5wc1OgQdNqjfM-DZhZZOmkFbcpU8q6SxNTDxZEs)
+![Differnec](https://ilobanov.files.wordpress.com/2011/09/architects11.png?w=575&h=377)
 
 
 
