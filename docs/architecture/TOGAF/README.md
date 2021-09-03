@@ -56,6 +56,7 @@ Ref models, VPs, tools > Dev baseline BA > Dev Target BA > Gap Analysis > Roadma
 - Architecture Change Management: provide continual monitoring and change management process, ensure the changes to arch are managed in a cohesive and architected way,  estalishes and supports enterprise architecture to provide flexibility to evolve rapidly in response to changes in technology or business environment, monitor the business and capacity management
 
 
+## ADM - Core of the TOGAF framework
 
 
 
@@ -65,4 +66,11 @@ Ref models, VPs, tools > Dev baseline BA > Dev Target BA > Gap Analysis > Roadma
 
 
 
+### Iamges
 
+![ADM](https://i.pinimg.com/originals/97/20/f2/9720f22c6c81e295d34d10c43d2748f9.png)
+
+![ADM](https://cdn-images.visual-paradigm.com/guide/togaf/togaf-adm-tutorial/02-togaf-adm.png)
+
+
+![Architecture Content Framework](https://www.visual-paradigm.com/servlet/editor-content/guide/togaf/togaf-adm-and-architecture-content-framework/sites/7/2019/09/06-contentf-framework.png)
