@@ -1,3 +1,7 @@
+### TOGAF training levels
+- TOGAF Foundation training
+- TOGAF Certification training
+
 ### TOGAF architecture areas
 - Business architecture
 - Data architecture
