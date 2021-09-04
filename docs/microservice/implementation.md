@@ -11,3 +11,7 @@ In the example above, the OrderMicroservice receives a request to place an order
 Disadvantage of the Saga pattern is it does not have read isolation. For example, the customer could see the order being created, but in the next second, the order is removed due to a compensation transaction.
 
 
+- In microsevice world, there is nothing as distributed transaction (trasnaction which is long and covers multiple services). Therefore immeditate consistency/ eventual consistency is accepted.
+
+### How do you do Data Synchronization?
+
