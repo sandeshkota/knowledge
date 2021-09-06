@@ -18,16 +18,20 @@ Disadvantage of the Saga pattern is it does not have read isolation. For example
 - Choreography
 - Orchestration
 
-### Fault Tolerant Microservices
-- Retry Pattern: Retry for several times when the API responses with some failures. If the API responds with a failure even after several retries, exit with a default message.
-- Circuit Breaker Pattern : A breaker which sits b/w two services and keeps a track of success and failed responses from a service. And then based on that data either allow, partially-allow or stop the service calls. Helps in failing fast.
+## Fault Tolerant Microservices
+
+### Retry Pattern: Retry for several times when the API responses with some failures. If the API responds with a failure even after several retries, exit with a default message.
+
+### Circuit Breaker Pattern : A breaker which sits b/w two services and keeps a track of success and failed responses from a service. And then based on that data either allow, partially-allow or stop the service calls. Helps in failing fast.
 	- Fallback: To another API with similar functionality / Use cached data 
-- Bulkhead Pattern: Divide the threadpool by number of services. So that any slowness in one of the service will not consume the threads in the threadpool and restrict the other service functionalities too. 
+
+### Bulkhead Pattern: Divide the threadpool by number of services. So that any slowness in one of the service will not consume the threads in the threadpool and restrict the other service functionalities too. 
 	- Setting a maximum threshold for number of concurrent request for a service
 	- Monitoring the number of concurrent calls to a service
 	- If the concurrent calls reaches threshold, restrict further calls untill the current concurrent calls decreases than the threshold value
 	- BulkHead: The wooden dividers inside a boat
-- Fallback Pattern:
+
+### Fallback Pattern:
 
 
 ## Links
