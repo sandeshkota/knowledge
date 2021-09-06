@@ -1,4 +1,4 @@
-### how do you manage distributed transactions?
+### How do you manage distributed transactions?
 - Suppose we need to update the data of two microservices and also we need to ensure that either both should get updated OR none should get updated, which is also called as atomicity. In a database system, atomicity means that in a transaction either all steps complete or no steps complete. 
 - There are two ways of solving this problem
 	- 2pc (2 phase commit) : 2pc has two phases: A prepare phase and a commit phase. In the prepare phase, all microservices will be asked to prepare for some data change that could be done atomically (and also locks the object). Once all microservices are prepared, the commit phase will ask all the microservices to make the actual changes.
@@ -13,5 +13,26 @@ Disadvantage of the Saga pattern is it does not have read isolation. For example
 
 - In microsevice world, there is nothing as distributed transaction (trasnaction which is long and covers multiple services). Therefore immeditate consistency/ eventual consistency is accepted.
 
+
+### SAGA Pattern
+- Choreography
+- Orchestration
+
+### Fault Tolerant Microservices
+- Retry Pattern: Retry for several times when the API responses with some failures. If the API responds with a failure even after several retries, exit with a default message.
+- Circuit Breaker Pattern : A breaker which sits b/w two services and keeps a track of success and failed responses from a service. And then based on that data either allow, partially-allow or stop the service calls. Helps in failing fast.
+	- Fallback: To another API with similar functionality / Use cached data 
+- Bulkhead Pattern: Divide the threadpool by number of services. So that any slowness in one of the service will not consume the threads in the threadpool and restrict the other service functionalities too. 
+	- Setting a maximum threshold for number of concurrent request for a service
+	- Monitoring the number of concurrent calls to a service
+	- If the concurrent calls reaches threshold, restrict further calls untill the current concurrent calls decreases than the threshold value
+	- BulkHead: The wooden dividers inside a boat
+- Fallback Pattern:
+
+
 ### How do you do Data Synchronization?
 
+
+## Links
+[Different Patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/)
+[.Net framework](https://github.com/App-vNext/Polly)
