@@ -37,6 +37,7 @@ Micorservices are small, autonomous services that work together.
 - Scaleable
 - Embrace new technologies faster
 - Reduced dependency on other service deployments
+- Incase of performance tuning (small & flexible, experimentation, scalable)
 
 
 ### Disadvantages ?
