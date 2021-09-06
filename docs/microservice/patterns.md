@@ -15,8 +15,10 @@ Disadvantage of the Saga pattern is it does not have read isolation. For example
 
 
 ### SAGA Pattern
-- Choreography
-- Orchestration
+- Choreography (Event Based)
+	- publish an event to Queue 
+- Orchestration (Command Based)
+	- interacts with an orchestrator. which handles communication with other services
 
 ## Fault Tolerant Microservices
 
