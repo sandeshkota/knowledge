@@ -30,9 +30,6 @@ Disadvantage of the Saga pattern is it does not have read isolation. For example
 - Fallback Pattern:
 
 
-### How do you do Data Synchronization?
-
-
 ## Links
 [Different Patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/)
 [.Net framework](https://github.com/App-vNext/Polly)
