@@ -41,5 +41,5 @@ Fallback to another service
 
 
 ## Links
-[Different Patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/)
-[.Net framework](https://github.com/App-vNext/Polly)
+[Different Patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/)  
+[.Net library for Fault Tolerant patterns](https://github.com/App-vNext/Polly)
