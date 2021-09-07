@@ -38,7 +38,15 @@
 - DDD
 - Strangler / Vine Pattern
 
+### Service Discovery
+Is a technique wherein a client will locate the service dynamically
+- DNS: serves basic purpouse
+- Apache Zookeeper
+- Consul
 
+### Other Factors
+- Idempotence: Is primary concept for microservices
+- Computing Availability: multiplication of all microservice availabilities in a particular functionality
 
 
 
