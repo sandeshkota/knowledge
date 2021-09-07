@@ -29,7 +29,7 @@ Micorservices are small, autonomous services that work together.
 - DDD: To come up with the boundary context, which in turn can be a microservice
 - Mindset: No matter what you cannot avoid failure, but it is important to plan on how to deal with a failure
 - 
-### Benefits ?
+### Benefits
 - Focus on small functionality
 - Defined ownership
 - Easy for new people to understand and be productive
@@ -40,15 +40,18 @@ Micorservices are small, autonomous services that work together.
 - Incase of performance tuning (small & flexible, experimentation, scalable)
 
 
-### Disadvantages ?
+### Challenges
 - Maintainence challenge as there are many services interacting with each other
-- Distrivuted Transaction is complex if there are more services
+- Distributed Transaction is complex if there are more services
 - Testing entire flow is difficult and so logging and monitoring plays a vital role
 - Since each microservice has its own set of technologies, moving people across teams will be challenging & requires training
 - Resolving issues if it cuts across multiple services
-- UI design can be challening as the client (or server) should aggregate data from several microservices and show it to the user
-- Every service should validate access token (extra calls)
-- Monitoring is also a challenge as there are many components to monitor. Logging should be aggregated.
+- UI design can be challenging as the client (or server) should aggregate data from several microservices and show it to the user
+- Monitoring & Logging is very important aspect and are very much needed. Monitoring is also a challenge as there are many components to monitor. Logging should be aggregated.
+- Communication b/w microservices happens over a network. So the network performance is also a major factor in designing a micro service. (So avoid chatty behavior)
+- Cascading Failures - Because of microservice dependencies. There are several patterns to reduce the impact - Fault Tolerant Patterns.
+- Automation mindset is very much needed as there are several microservices.
+
 
 
 
