@@ -61,9 +61,35 @@ Is a technique wherein a client will locate the service dynamically
 ### Event Driven Architecture
 A system which is driven by production, detection, consumption and reaction to events
 
+### Developing a microservice
+- Find the System Boundaries
+- Find the dependant systems
+- Come up with Testing strategy (Testing Pyramid)
+- Continous Delivery Techniques 
+  - Versioning - URL, version number in messages, system should support both versions, old version decommision strategy
+  - Feature Flags - requires testing both paths
+- Automation mindset is very much needed (invest in tooling)
+- Ubiquitous Language: Same language for everyone. Domain names, class names, etc..
+- Ensure right amount flexibility is achieved: Too much flexibility is also not right choice. A certain level of rigidity is also important.
+- Capacity: Know the microservice's limits
+- Observability: Monitoring & Logging. Analyse telemetry data ( use correlation IDs)
+- Handling failures: fault tolerance patterns (retry, circuit breaker, etc..)
 
+### Deployment
+- Blue-Green Deployment
+  - In which a new set of PROD like infra is brough up with new functionality
+  - Once tested and certified, change the loadbalancer configuration to point to this new service
+  - Monitor for sometime and if everything is fine remove the old service OR use it as sStaging/Prod-Bis
+  - Requires Prod like infra setup
+- Canary Deployment:
+  - In whhich the new functionality is released to a subset of users. All infrastructure in a target environment is updated in small phases (e.g: 2%, 25%, 75%, 100%)
+  - Session affinity is aprt of the process
+- A/B Testing
+  - Is more of running two different functionalities and redirecting the users to any of these functionalities
+  - The redirection can be independent of user / sessiona affinity can be maintained   
 
-
-
+### Software Quality
+- External (For users) - correctness, user experience, reliability, absence of errors, performance
+- Internal (for devlopers) - maintainability, testability, observability, simplicity, extensibility
 
 
