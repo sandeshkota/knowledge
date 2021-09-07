@@ -49,7 +49,14 @@ Is a technique wherein a client will locate the service dynamically
 - Computing Availability: multiplication of all microservice availabilities in a particular functionality
 
 
-
+### Communication
+- RPC: One way - Request-Reply - Synchronous
+- Message Bus: One Way - multiple consumers (loose coupling) - Faster (as the success is decided on publishing message to message bus) - easy to add/remove consumers - more load-it's queued - client down? the message will be queued in bus, sent/pulled when the client is up
+```
+// anatomy of a message
+- Sample payload (business relevant information)
+- Headers (TimeStamp, Sender Info, Correlation ID, Error handling info, Custom headers)
+```
 
 
 
