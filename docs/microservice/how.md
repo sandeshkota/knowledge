@@ -62,7 +62,7 @@ Is a technique wherein a client will locate the service dynamically
 A system which is driven by production, detection, consumption and reaction to events
 
 ### Developing a microservice
-- Find the System Boundaries
+- Find the System Boundaries and data ownership
 - Find the dependant systems
 - Come up with Testing strategy (Testing Pyramid)
 - Continous Delivery Techniques 
