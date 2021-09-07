@@ -92,4 +92,15 @@ A system which is driven by production, detection, consumption and reaction to e
 - External (For users) - correctness, user experience, reliability, absence of errors, performance
 - Internal (for devlopers) - maintainability, testability, observability, simplicity, extensibility
 
+### Sending Correlation ID
+- Create middleware which adds a correaltionID to the HTTP request context, if it doesn't exists (if exists in the request header, use the same)
+```csharp
+app.UseMiddleware<LogHeaderMiddleware>();  
+```
+- Override SendAsync() of RequestHandler and add the correlationID to the request header (ensure that you are using this for all HTTP requests)
+```csharp
+services.AddHttpContextAccessor();
+```
+- Read the CorrelationID from the request header and use it for logging
+
 
