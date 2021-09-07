@@ -1,3 +1,10 @@
+### SAGA Pattern - Handling Distributed Trasnactions
+- Choreography (Event Based)
+	- publish an event to Queue 
+- Orchestration (Command Based)
+	- interacts with an orchestrator. which handles communication with other services
+
+
 ### How do you manage distributed transactions?
 - Suppose we need to update the data of two microservices and also we need to ensure that either both should get updated OR none should get updated, which is also called as atomicity. In a database system, atomicity means that in a transaction either all steps complete or no steps complete. 
 - There are two ways of solving this problem
@@ -12,13 +19,13 @@ Disadvantage of the Saga pattern is it does not have read isolation. For example
 
 
 - In microsevice world, there is nothing as distributed transaction (trasnaction which is long and covers multiple services). Therefore immeditate consistency/ eventual consistency is accepted.
-
-
-### SAGA Pattern
-- Choreography (Event Based)
-	- publish an event to Queue 
-- Orchestration (Command Based)
-	- interacts with an orchestrator. which handles communication with other services
+- 
+### Routing Slip Pattern
+- A routing slip is included along with the message, which indicates a service what it should do and also tells it to froward it to the next service (with isntructions to work)
+- Better for conditional (flexible)
+- Not centralized state as in SAGA Pattern
+- Cancellation is difficult when compared with SAGA Pattern
+- Parallelization is difficult like in SAGA Pattern
 
 ## Fault Tolerant Microservices
 
@@ -38,6 +45,8 @@ Divide the threadpool by number of services. So that any slowness in one of the 
 
 ### Fallback Pattern
 Fallback to another service
+
+
 
 
 ## Links
