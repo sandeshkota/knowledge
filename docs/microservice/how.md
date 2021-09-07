@@ -58,7 +58,8 @@ Is a technique wherein a client will locate the service dynamically
 - Headers (TimeStamp, Sender Info, Correlation ID, Error handling info, Custom headers)
 ```
 
-
+### Event Driven Architecture
+A system which is driven by production, detection, consumption and reaction to events
 
 
 
