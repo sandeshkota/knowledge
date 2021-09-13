@@ -74,6 +74,8 @@ A system which is driven by production, detection, consumption and reaction to e
 - Capacity: Know the microservice's limits
 - Observability: Monitoring & Logging. Analyse telemetry data ( use correlation IDs)
 - Handling failures: fault tolerance patterns (retry, circuit breaker, etc..)
+- Idempotent: handling how to handle duplicate requests
+- Correlation: Use correlation ID when there are multiple services interacting with each other
 
 ### service interaction
 - If a micro service communicates with another using it's IP address, then there will be a tight coupling and by changing the IP address of one will impact another one. Also if we spin up another container of same microservice it will be a challenge.
