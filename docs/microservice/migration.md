@@ -19,3 +19,10 @@
 - Incase of failure in microservice, switch back to the monolith for all functionality
 - Once enough confidence is built with the new microservice, remove that functionality from monolith and use the new microservice for realted functionality
 - ensure that the new microservice is integrated along with the monolith (consider, data migration, data sync, communication, etc..)
+
+### Steps
+- Transform
+- Co Exist
+- Release Strategy
+- Eliminate
+- Rinse and repeat
