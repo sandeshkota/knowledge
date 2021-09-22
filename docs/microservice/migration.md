@@ -12,6 +12,7 @@
 
 ### Strangler Application Pattern
 - Anology: Tree (onolith) to Strangler Fig (microservices)
+![Strangler Fig Tree Image](https://www.tpisoftware.com/tpu/File/onlineResource/articles/1339/titlePageImg.jpg)
 - DDD process, decide your domains and sub domains
 - Start small, start building a small and less complex sub domain as a microservice. Ensure that everything else remains the same (request and response objects, etc..)
 - Bring in a router component b/w client and server. Let the routing component redirect the client requests to either monolith or microservice based on the funcitonality requested
