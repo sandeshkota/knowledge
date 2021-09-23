@@ -11,7 +11,7 @@
 - Avoid Big Bang
 
 ### Strangler Application Pattern
-- Anology: Tree (onolith) to Strangler Fig (microservices)
+- Anology: Tree (monolith) to Strangler Fig (microservices)
 
 ![Strangler Fig Tree Image](https://www.tpisoftware.com/tpu/File/onlineResource/articles/1339/titlePageImg.jpg)
 - DDD process, decide your domains and sub domains
