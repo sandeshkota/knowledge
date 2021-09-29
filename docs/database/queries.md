@@ -26,3 +26,10 @@ LEFT JOIN OrderLines ON OrderLines.OrderID=Orders.ID
     AND Orders.ID = 12345
 -- returns all rows of Orders by filling the data for OrderLines where Orders.Id = 12345
 ```
+
+Creating a Covering Index (including columns to read)
+```sql
+CREATE NONCLUSTERED INDEX IX_Material
+    ON dbo.tbl(col1,coll2)
+    INCLUDE (col3,col4,col5);
+```
