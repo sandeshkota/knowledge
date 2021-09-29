@@ -48,3 +48,17 @@ CREATE NONCLUSTERED INDEX IX_Material
         ON dbo.tbl(col1,coll2)
         INCLUDE (col3,col4,col5);
 ```
+
+Forcing a query to use a certain index
+```sql
+SELECT * FROM table1 USE INDEX (col1_index,col2_index)
+  WHERE col1=1 AND col2=2 AND col3=3;
+  
+SELECT * FROM t1
+   USE INDEX (i1,i2) IGNORE INDEX (i2);
+
+SELECT * FROM t
+  USE INDEX (index1)
+  IGNORE INDEX (index1) FOR ORDER BY
+  IGNORE INDEX (index1) FOR GROUP BY
+```
