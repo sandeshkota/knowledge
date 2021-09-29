@@ -12,4 +12,4 @@
 
 ### [Architecture](./architecture/)
 
-### [DataBase](./architecture/)
+### [DataBase](./database/)
