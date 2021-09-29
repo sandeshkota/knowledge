@@ -62,3 +62,11 @@ SELECT * FROM t
   IGNORE INDEX (index1) FOR ORDER BY
   IGNORE INDEX (index1) FOR GROUP BY
 ```
+
+Create materializd view
+```sql
+CREATE MATERIALIZED VIEW mv_table1_table2 AS
+  SELECT col1, col2
+    FROM table1, table2
+    WHERE table1.id = table2.ref_id
+```
