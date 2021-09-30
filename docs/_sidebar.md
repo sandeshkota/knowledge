@@ -5,6 +5,7 @@
 * [Microservice](./microservice/)
 * [Architecture](./architecture/)
 * [DataBase](./database/)
+* [Azure](./azure/)
 
 
 
