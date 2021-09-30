@@ -80,7 +80,7 @@ Indexes are special lookup tables that the database search engine can use to spe
   - Certain SET Options are required
 
 ### Columnstore indexes
-- For analytical queries
+- For analytical queries, data warehouses
 - google for more info..
 
 ## Reading Execution Plan Parameters
@@ -101,6 +101,12 @@ Indexes are special lookup tables that the database search engine can use to spe
   - nested Loop Joins
   - etc.. 
 - Filtered Indexes
-
+  - Indexes with Filters
+  ```sql
+  CREATE NONCLUSTERED INDEX FI_Employee_DOJ
+  ON Employee(DOJ)
+    WHERE DOJ IS NOT NULL -- notice here the filter criteria for the index
+  GO
+  ```
 
 
