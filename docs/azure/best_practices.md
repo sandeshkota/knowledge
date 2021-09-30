@@ -1,0 +1,26 @@
+### Common patterns & practices
+
+- Cache aside
+- circuit breaker
+- compensating transaction
+- competing consumers
+- compute resource consolidation
+- CQRS: Command & Query responsible segregation
+- Event sourcing
+- External Configuration store
+- Federated Identity
+- Gatekeeper
+- Health endpoint monitoring
+- Index table
+- leader election
+- materialized view
+- pipes and filters
+- priority queue
+- queue based load leveling
+- retry
+- runtime re-configuration
+- scheduler agent supervisor
+- sharding
+- static content hosting
+- throttling
+- valet key
