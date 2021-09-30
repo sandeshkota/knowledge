@@ -80,7 +80,8 @@ Indexes are special lookup tables that the database search engine can use to spe
   - Certain SET Options are required
 
 ### Columnstore indexes
-
+- For analytical queries
+- google for more info..
 
 ## Reading Execution Plan Parameters
 - Number of Rows Read: number of rows the query read (need to read most to check if it is within the quer filters or not)
