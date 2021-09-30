@@ -81,6 +81,7 @@ Indexes are special lookup tables that the database search engine can use to spe
 
 ### Columnstore indexes
 - For analytical queries, data warehouses
+- Not ideal for system with lots of single row modification (as it has to manage deleted tree, delta tree, etc..)
 - google for more info..
 
 ## Reading Execution Plan Parameters
