@@ -18,10 +18,10 @@
 
 ## Azure Services
 ### Compute
-- VM
-- VM Scale Sets (To deploy  manage a set of identical VMs)
+- Virtual Machine (VM)
+- Virtual Machine Scale Sets (VMSS) (To deploy  manage a set of identical VMs)
 - Azure Kubernetes Services
-- Azure Container Instances
+- Azure Container Instances - for small apps (dev, test, etc..) - only one container isntance can be run - so not much on availability
 - Azure Service Fabric
 - Azure Batch (Enables large-scale parallel  high-performance computing (HPC) batch jobs  the ability  scale  tens/hundreds/thousands of VMs)
 - Azure Functions (Server )
