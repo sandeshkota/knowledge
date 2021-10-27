@@ -1,5 +1,5 @@
 ### Angular 8
-- Differential loading: lets you create two different bundles of your app. Attributes on the <script> tag in your index.html file let the browser request the most appropriate bundle; modern browsers will request a bundle that uses ES2015 JavaScript syntax and will be significantly smaller than the legacy bundle that uses ES5 syntax
+- Differential loading: lets you create two different bundles of your app. Attributes on the script tag in your index.html file let the browser request the most appropriate bundle; modern browsers will request a bundle that uses ES2015 JavaScript syntax and will be significantly smaller than the legacy bundle that uses ES5 syntax
 - Ivy Compiler - opt in preview feature
 - Bazel builder
 - Webworker in Angular CLI
