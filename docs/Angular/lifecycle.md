@@ -26,6 +26,7 @@ This event is called when Angular starts destroying the component (may be bcoz o
 ### ElementRef
 A wrapper around the native element through which we can access the HTML element
 - A directive - injected in constructor
+
 ```javascript
 @Directive({ selector: '[highlight]' })
 
@@ -43,9 +44,11 @@ export class HighlightDirective implements OnChanges {
 ```
 
 - Child element
+
 ```html
 <div #hello>Hello Angular</div>
 ```
+
 ```javascript
 @ViewChild('hello', { static: false }) divHello: ElementRef;
 
@@ -53,7 +56,6 @@ print() {
   console.log(this.divHello.nativeElement);
 }
 ```
-
 
 ### Hostbinding and HostListener
 HostBinding is used to bind the decorated element's property in the directive
