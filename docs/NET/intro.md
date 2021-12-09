@@ -1,5 +1,5 @@
 ### What is .Net ?
-
+A framework to build applications (windows, web, etc..)
 
 # What is .Net Framework ? .Net Core Framework ? .Net Standard ?
 
