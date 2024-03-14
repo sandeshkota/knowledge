@@ -27,3 +27,12 @@
  
  ![image](https://github.com/sandeshkota/knowledge/assets/1955866/82d96e41-2cda-4983-89e1-7f7e6eb7bdc4)
 
+
+- Letter Groups
+  - Vertical
+  - Curved
+  - Combination
+  - Oblique
+ 
+![image](https://github.com/sandeshkota/knowledge/assets/1955866/696214ac-444b-4cd7-8153-a1643a5fa022)
+ 
