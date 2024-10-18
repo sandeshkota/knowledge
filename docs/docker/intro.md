@@ -23,7 +23,7 @@ Virtualization
 - Boot slower comparitively
 - Complete Isolation as the Kernel is virutalized and not shared
 
-![VM v/s Containers](https://i2.wp.com/www.docker.com/blog/wp-content/uploads/Blog.-Are-containers-..VM-Image-1.png)
+![VM v/s Containers](https://s7280.pcdn.co/wp-content/uploads/2018/07/containers-vs-virtual-machines.jpg)
 
 It is not VM v/s Containers. We can have a mixed model.  
 Two VMs running on a server and multiple Containers on each VM.
