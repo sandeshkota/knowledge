@@ -16,6 +16,7 @@ Containerization
 - Smaller Size
 - Boot faster
 - Less Isolation as the Kernel is shared
+  
 Virtualization
 - Virtualizes both Application and Kernel Layer
 - Larger Size
