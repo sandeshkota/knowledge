@@ -32,7 +32,7 @@ Two VMs running on a server and multiple Containers on each VM.
 An image is a package or a template. It is used to create one or more containers
 
 ### Containers ?
-Containers are running instances of images that are isoalted and have own environments and set of processes.
+Containers are running instances of images that are isolated and have own environments and set of processes.
 
 ### Benefits of Docker
 - Compatibility / Dependency
@@ -48,6 +48,7 @@ Containers are running instances of images that are isoalted and have own enviro
 ### Layered Architecture
 - Docker creates an image each time a change is applied on the base image
 Example: Sample Dockerfile  - which downlaods the Ubuntu  and then installs pyhton etc..
+
 ```yaml
 FROM UBUNTU
 
